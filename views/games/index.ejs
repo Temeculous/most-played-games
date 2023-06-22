@@ -1,9 +1,9 @@
-<%- include('../partials/header') %>
-<h3>Game 1</h3>
-<section>
-  <%= games.name %> <br />
-  Hours Played:<%= games.hoursPlayed %> hrs
-</section>
-<h3>Game 2</h3>
-<h3>Game 3</h3>
+<%- include('../partials/header') %> 
+<% games.forEach((game) => { %>
+<h1><%= game.name %></h1>
+<h2>Hours Played:</h2>
+<span><%= game.hoursPlayed %></span>
+<h2>Year Released:</h2>
+<span><%= game.yearReleased %></span>
+<% }) %> 
 <%- include('../partials/footer') %>
