@@ -1,0 +1,12 @@
+<%- include('../partials/header') %>
+<h1>Edit <%= game.name %></h1>
+<form action="/games/:id?_method=PUT" method="POST">
+    <label for="name">Name:</label>
+    <input name="name" type="text" value=""/>
+    <label for="hoursPlayed">Total hours played:</label>
+    <input name="hoursPlayed" type="number" value=""/>
+    <label for="yearReleased">Release date:</label>
+    <input name="yearReleased" type="date" value=""/>
+    <button type="submit">Add Game</button>
+  </form>
+<%- include('../partials/footer') %>

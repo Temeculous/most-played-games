@@ -1,7 +1,7 @@
 <%- include('../partials/header') %> 
 <h1>All Games</h1>
 <% games.forEach((game) => { %>
-<h2><%= game.name %></h2>
+<a href="/games/<%= game.id %>"><h2><%= game.name %></h2></a>
 <h3>Hours Played:</h3>
 <span><%= game.hoursPlayed %> hrs</span>
 <h3>Released:</h3>
