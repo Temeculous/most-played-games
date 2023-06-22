@@ -1,10 +1,12 @@
-<%- include('../partials/header') %> 
+<%- include('../partials/header') %>
 <h1>All Games</h1>
 <% games.forEach((game) => { %>
 <a href="/games/<%= game.id %>"><h2><%= game.name %></h2></a>
+<form action="/games/<%= game.id %>?_method=DELETE" method="POST">
+  <button type="submit">X</button>
+</form>
 <h3>Hours Played:</h3>
 <span><%= game.hoursPlayed %> hrs</span>
 <h3>Released:</h3>
 <span><%= game.yearReleased %></span>
-<% }) %> 
-<%- include('../partials/footer') %>
+<% }) %> <%- include('../partials/footer') %>
