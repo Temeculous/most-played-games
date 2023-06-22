@@ -1,6 +1,6 @@
 const Game = require("../models/game");
 
-module.exports = { index, newGame, createGame, show, editGame };
+module.exports = { index, newGame, createGame, show, editGame, updateGame };
 
 async function index(req, res, next) {
   const games = await Game.find({});
@@ -33,4 +33,9 @@ async function editGame(req, res, next) {
   } catch (err) {
     console.log(err);
   }
+}
+
+async function updateGame(req, res, next) {
+  await Game.findByIdAndUpdate(req.body.id, req.body);
+  res.redirect(`/games/${req.body.id}`);
 }

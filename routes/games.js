@@ -14,4 +14,5 @@ router.get("/:id", gamesCtrl.show);
 //GET update form
 router.get("/:id/edit", gamesCtrl.editGame);
 //POST update
+router.put("/:id", gamesCtrl.updateGame);
 module.exports = router;
