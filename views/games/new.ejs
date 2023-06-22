@@ -1,3 +1,12 @@
 <%- include('../partials/header') %>
 <h1>Add new game</h1>
+<form action="/games" method="POST">
+  <label for="name">Name:</label>
+  <input name="name" type="text" />
+  <label for="hoursPlayed">Total hours played:</label>
+  <input name="hoursPlayed" type="number" />
+  <label for="yearReleased">Release date:</label>
+  <input name="yearReleased" type="date" />
+  <button type="submit">Add Game</button>
+</form>
 <%- include('../partials/footer') %>

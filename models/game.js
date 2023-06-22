@@ -3,18 +3,14 @@ const Schema = mongoose.Schema;
 
 const gameSchema = new Schema({
   name: {
-    required: true,
-    type: "string",
+    type: String,
   },
   hoursPlayed: {
-    required: true,
-    type: "number",
+    type: Number,
     min: 1,
   },
   yearReleased: {
-    required: false,
-    type: "number",
-    min: 1960,
+    type: Date,
   },
 });
 

@@ -6,4 +6,7 @@ var gamesCtrl = require("../controllers/games");
 router.get("/", gamesCtrl.index);
 //GET new game form
 router.get("/new", gamesCtrl.newGame);
+//POST new game
+router.post("/", gamesCtrl.createGame);
+
 module.exports = router;
