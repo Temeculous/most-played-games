@@ -9,10 +9,12 @@ const gameSchema = new Schema({
   hoursPlayed: {
     required: true,
     type: "number",
+    min: 1,
   },
   yearReleased: {
     required: false,
     type: "number",
+    min: 1960,
   },
 });
 
