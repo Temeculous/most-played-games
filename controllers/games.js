@@ -43,7 +43,12 @@ async function editGame(req, res, next) {
   }
 }
 
-async function updateGame(req, res, next) {}
+async function updateGame(req, res, next) {
+    const id = req.params.id;
+  await Game.findByIdAndUpdate(id, req.body);
+  res.redirect('/games')
+
+}
 
 async function deleteGame(req, res, next) {
   await Game.findByIdAndRemove(req.params.id);
