@@ -1,6 +1,6 @@
 <%- include('../partials/header') %>
 <h1>Add new game</h1>
-<form action="/games" method="POST">
+<!-- <form action="/games" method="POST">
   <label for="name">Name:</label>
   <input name="name" type="text" />
   <label for="hoursPlayed">Total hours played:</label>
@@ -8,5 +8,22 @@
   <label for="yearReleased">Release date:</label>
   <input name="yearReleased" type="date" />
   <button type="submit">Add Game</button>
+</form> -->
+<form action="/games" method="POST" class="row g-3">
+  <div class="col-sm-6">
+<label class="form-label" for="name">Game title</label>
+<input class="form-control" id="name" name="name" type="text">
+  </div>
+  <div class="col-3">
+    <label class="form-label" for="hoursPlayed">Hours played</label>
+    <input class="form-control" id="hoursPlayed" name="hoursPlayed" type="number">
+  </div>
+  <div class="col-3">
+    <label class="form-label" for="yearReleased">Year released</label>
+    <input class="form-control" id="yearReleased" name="yearReleased" type="date">
+  </div>
+  <div class="col-3">
+    <button type="submit" class="btn btn-primary">Add game</button>
+  </div>
 </form>
 <%- include('../partials/footer') %>

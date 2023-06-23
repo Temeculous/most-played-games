@@ -1,12 +1,17 @@
 <%- include('../partials/header') %>
 <h1>All Games</h1>
 <% games.forEach((game) => { %>
-<a href="/games/<%= game.id %>"><h2><%= game.name %></h2></a>
-<form action="/games/<%= game.id %>?_method=DELETE" method="POST">
-  <button type="submit">X</button>
-</form>
-<h3>Hours Played:</h3>
-<span><%= game.hoursPlayed %> hrs</span>
-<h3>Released:</h3>
-<span><%= game.yearReleased %></span>
-<% }) %> <%- include('../partials/footer') %>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title"><%= game.name %></h5>
+      <h6 class="card-subtitle mb-2 text-muted">Hours played: <%= game.hoursPlayed %></h6>
+      <p class="card-text">Release Date: <%= game.yearReleased %></p>
+      <a href="/games/<%= game.id %>" class="card-link">About: <%= game.name %></a>
+      <form action="/games/<%= game.id %>?_method=DELETE" method="POST">
+        <button class="btn btn-danger" type="submit">Delete</button>
+      </form>
+    </div>
+  </div>
+<% }) %> 
+
+<%- include('../partials/footer') %>
